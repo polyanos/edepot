@@ -1,0 +1,35 @@
+{
+  "root" :
+  {
+    "ToPX" :
+    {
+      "naam" : "ToPX",
+      "meerdere" : false,
+      "verplicht" : true,
+      "elementen" :
+      {
+        "aggregatie_bestand" :
+        [
+          {
+            "aggregatie" :
+            {
+              "naam" : "aggregatie",
+              "meerdere" : false,
+              "verplicht" : true,
+              "elementen" : "::basiseigenschappen"
+            }
+          },
+          {
+            "bestand" :
+            {
+              "naam" : "bestand",
+              "meerdere" : false,
+              "verplicht" : true,
+              "elementen" : "::basiseigenschappen"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
