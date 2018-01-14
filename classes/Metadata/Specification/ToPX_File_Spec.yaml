@@ -1,0 +1,58 @@
+ToPX:
+  required: true
+  multiple: false
+  type: container
+  attributes:
+    name:
+      required:
+      usermapped: false
+    name:
+      required:
+      usermapped: false
+    name:
+      required:
+      usermapped: false
+  childelements:
+    bestand:
+      required: true
+      multiple: false
+      type: container
+      childelements:
+        identificatiekenmerk:
+          required: true
+          multiple: false
+          type: string
+          usermapped: false
+        aggregatieniveau:
+          required: true
+          multiple: false
+          type: string
+          usermapped: true
+          usermappedselectable: true
+        naam:
+          required: true
+          multiple: true
+          type: string
+          usermapped: true
+          usermappedselectable: true
+        vorm:
+          required: true
+          multiple: true
+          type: container
+          usermappedselectable: true
+          childelements:
+            redactieGerne:
+              required: true
+              multiple: false
+              type: string
+              usermapped: true
+            verschijningsvorm:
+              required: false
+              multiple: true
+              type: string
+              usermapped: true
+            structure:
+              required: false
+              multiple: false
+              type: string
+              usermapped: true

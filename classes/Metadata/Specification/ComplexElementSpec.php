@@ -11,70 +11,52 @@ include_once "ElementSpec.php";
 
 class ComplexElementSpec extends ElementSpec
 {
-    private $multiple;
-    private $childSpec;
+    private $children;
 
-    public function __construct($specification, $fullSpec)
+    /**
+     * ComplexElementSpec constructor.
+     * @param string $name
+     * @param string $type
+     * @param bool $required
+     * @param bool $multiple
+     * @param ElementSpec $parent
+     */
+    public function __construct($name, $type, $required = false, $multiple = false, $parent = null)
     {
-        parent::__construct($specification);
+        parent::__construct($name, $type, $required, $multiple, $parent);
 
-        $this->multiple = $specification["multiple"];
-        $this->childSpec = createChildSpec();
+        $this->children = array();
     }
 
-    private function createChildrenSpec($jsonSpec, $fullJsonSpec){
-        $children = [];
-
-        foreach($jsonSpec["children"] as $childJsonSpec){
-            if($this->isShortcut($childJsonSpec)){
-                $childJsonSpec = $fullJsonSpec[$childJsonSpec];
-            }
-            if(is_array($childJsonSpec)){
-                if(isset($childJsonSpec[0])){
-                    $children[] = $this->createChoiceSpec($childJsonSpec, $fullJsonSpec);
-                } else {
-                    $children[] = $this->createChildSpec($childJsonSpec, $fullJsonSpec);
-                }
-            } else {
-                trigger_error("");
-            }
+    /**
+     * @param ElementSpec $child
+     */
+    public function addChild(ElementSpec $child){
+        if(isset($this->children[$child->getName()])){
+            throw new InvalidArgumentException("This element already has a child named ".$child->getName()." and cannot have multiple children of this element");
+        } else{
+            $this->children[$child->getName()] = $child;
         }
     }
 
-    private function isShortcut($val){
-        $regEx = "/^\:\:[\w]{4,}$/";
-        if(is_string($val) && preg_match($regEx, $val)){
-            return true;
-        } else {
-            return false;
+    /**
+     * @param ElementSpec[] $children
+     */
+    public function addChildren($children){
+        if(!is_array($children)){
+            throw new InvalidArgumentException("Children needs to be an array");
+        }
+
+        foreach($children as $child){
+            $this->addChild($child);
         }
     }
 
-    private function createChoiceSpec($childJsonChoiceSpec, $fullJsonSpec){
-        $childChoice = [];
-        foreach($childJsonChoiceSpec as $childJsonSpec){
-            if($this->isShortcut($childJsonSpec)){
-                $childChoice[] = $this->createChildSpec($fullJsonSpec["$childJsonSpec"], $fullJsonSpec);
-            }else {
-                $childChoice[] = $this->createChildSpec($childJsonSpec, $fullJsonSpec);
-            }
+    public function getChild($name){
+        if(isset($this->children[$name])){
+            return $this->children[$name];
+        } else{
+            return null;
         }
-
-        return $childChoice;
-    }
-
-    private function createChildSpec($childJsonSpec, $fullJsonSpec){
-        switch($childJsonSpec["type"]){
-            case iElementSpec::simple:
-                $child = new SimpleElementSpec($childJsonSpec);
-                break;
-            case iElementSpec::complex:
-                $child = new ComplexElementSpec($childJsonSpec, $fullJsonSpec);
-                break;
-            default:
-                $child = null;
-        }
-
-        return $child;
     }
 }
