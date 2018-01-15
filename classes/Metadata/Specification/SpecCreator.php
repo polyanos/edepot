@@ -44,7 +44,8 @@ class SpecCreator
 
                 if(isset($specData["children"]) && is_array($specData["children"])){
                     foreach($specData["children"] as $childName => $childData){
-                        $this->constructElement($element, $childName, $childData);
+                        $child = $this->constructElement($element, $childName, $childData);
+                        $element->addChild($child);
                     }
                 }
                 break;
@@ -96,4 +97,4 @@ class SpecCreator
 $file = file_get_contents(dirname(__FILE__)."\specfiles\ToPX_File_Spec.yaml");
 $sc = new SpecCreator($file);
 
-echo "<pre>".print_r($sc->getSpecification(), true)."</pre>";
+echo "<pre>".var_export($sc->getSpecification(), true)."</pre>";

@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="768b5d0b-3795-46da-a08e-f09826eb50af" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/classes/Metadata/Specification/specfiles/ToPX_File_Mapping" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/classes/Metadata/Specification/ComplexElementSpec.php" afterPath="$PROJECT_DIR$/classes/Metadata/Specification/ComplexElementSpec.php" />
-      <change beforePath="$PROJECT_DIR$/classes/Metadata/Specification/ElementSpec.php" afterPath="$PROJECT_DIR$/classes/Metadata/Specification/ElementSpec.php" />
-      <change beforePath="$PROJECT_DIR$/classes/Metadata/Specification/SimpleElementSpec.php" afterPath="$PROJECT_DIR$/classes/Metadata/Specification/SimpleElementSpec.php" />
       <change beforePath="$PROJECT_DIR$/classes/Metadata/Specification/SpecCreator.php" afterPath="$PROJECT_DIR$/classes/Metadata/Specification/SpecCreator.php" />
-      <change beforePath="$PROJECT_DIR$/classes/Metadata/Specification/ToPX_File_Spec.yaml" afterPath="$PROJECT_DIR$/classes/Metadata/Specification/specfiles/ToPX_File_Spec.yaml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,10 +66,10 @@
       <file leaf-file-name="SpecCreator.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/SpecCreator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1014">
-              <caret line="84" column="44" lean-forward="true" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
+            <state relative-caret-position="17">
+              <caret line="47" column="51" lean-forward="false" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
               <folding>
-                <marker date="1515976604877" expanded="true" signature="2973:3136" ph="..." />
+                <marker date="1515977892496" expanded="true" signature="3034:3197" ph="..." />
               </folding>
             </state>
           </provider>
@@ -341,12 +335,12 @@
       <workItem from="1515883767127" duration="6384000" />
       <workItem from="1515942673845" duration="8157000" />
       <workItem from="1515951408902" duration="785000" />
-      <workItem from="1515962143411" duration="10750000" />
+      <workItem from="1515962143411" duration="11949000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199206000" />
+    <option name="totallyTimeSpent" value="200405000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -609,10 +603,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/SpecCreator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1014">
-          <caret line="84" column="44" lean-forward="true" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
+        <state relative-caret-position="17">
+          <caret line="47" column="51" lean-forward="false" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
           <folding>
-            <marker date="1515976604877" expanded="true" signature="2973:3136" ph="..." />
+            <marker date="1515977892496" expanded="true" signature="3034:3197" ph="..." />
           </folding>
         </state>
       </provider>
