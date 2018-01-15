@@ -6,7 +6,7 @@
  * Time: 12:15
  */
 
-class SimpleElement implements iElement
+class SimpleXmlElement
 {
     private $name;
     private $value;
