@@ -10,16 +10,19 @@ class ComplexXmlElement extends XmlElement
 {
     private $childs;
 
-    public function __construct($name)
+    public function __construct($name, XmlElement $parent = null)
     {
-        parent::__construct($name, iElement::complex);
+        parent::__construct($name, iElement::complex, $parent);
 
         $this->childs = array();
     }
 
     public function getXml(DOMNode $xmlParent)
     {
-        $element = $xmlParent->createElement($this->name);
+        if(is_null($xmlParent)){
+
+        }
+        $element = $xmlParent->ownerDocument->createElement($this->name);
         $xmlParent->appendChild($element);
         $this->getAttributeXml($element);
 
@@ -31,6 +34,7 @@ class ComplexXmlElement extends XmlElement
                 $child->getXml($element);
             }
         }
+        return $element;
     }
 
     public function validate(iElementSpec $specification)

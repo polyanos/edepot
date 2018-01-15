@@ -11,13 +11,14 @@ abstract class XmlElement implements iElement
     protected $name;
     protected $type;
     protected $attributes;
+    protected $parent;
 
     /**
      * XmlElement constructor.
      * @param string $name
      * @param string $type
      */
-    public function __construct($name, $type)
+    public function __construct($name, $type, XmlElement $parent = null)
     {
         if(is_string($name) && !empty($name)){
             $this->name = $name;
@@ -29,6 +30,7 @@ abstract class XmlElement implements iElement
         } else{
             throw new InvalidArgumentException("Tried to create an element while providing an invalid type");
         }
+        $this->parent = $parent;
 
         $this->attributes = array();
     }
@@ -79,5 +81,13 @@ abstract class XmlElement implements iElement
         foreach ($this->attributes as $attributeName => $attributeValue){
             $node->setAttribute($attributeName, $attributeValue);
         }
+    }
+
+    public function getParent(){
+        return $this->parent;
+    }
+
+    public function isRoot(){
+        return is_null($this->parent);
     }
 }
