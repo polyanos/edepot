@@ -49,7 +49,7 @@ class ElementSpec implements iElementSpec
         $this->multiple = is_bool($multiple) ? $multiple : false;
         $this->parent = $parent;
 
-        $this->attributes = [];
+        $this->attributes = array();
         if(isset($attributes)) {
             foreach ($attributes as $attribute) {
                 $this->attributes[] = new AttributeSpec($attribute["name"], $attribute["required"]);
@@ -96,5 +96,13 @@ class ElementSpec implements iElementSpec
     public function getMultiple()
     {
         return $this->multiple;
+    }
+
+    /**
+     * @return ElementSpec|null
+     */
+    public function getParent()
+    {
+        return $this->parent;
     }
 }

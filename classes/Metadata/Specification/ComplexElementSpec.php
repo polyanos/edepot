@@ -20,10 +20,11 @@ class ComplexElementSpec extends ElementSpec
      * @param bool $required
      * @param bool $multiple
      * @param ElementSpec $parent
+     * @param array $attributes
      */
-    public function __construct($name, $type, $required = false, $multiple = false, $parent = null)
+    public function __construct($name, $type, $required = false, $multiple = false, $parent = null, $attributes = array())
     {
-        parent::__construct($name, $type, $required, $multiple, $parent);
+        parent::__construct($name, $type, $required, $multiple, $attributes, $parent);
 
         $this->children = array();
     }

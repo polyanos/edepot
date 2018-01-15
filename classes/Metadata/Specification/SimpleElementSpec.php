@@ -24,7 +24,7 @@ class SimpleElementSpec extends ElementSpec
      * @param bool $multiple
      * @param array $attributes
      * @param ElementSpec|null $parent
-     */public function __construct($name, $type, ElementSpec $parent = null, $valueType = "any", $required = false, $multiple = false, $empty = true, $attributes = null)
+     */public function __construct($name, $type, $required = false, $multiple = false, $parent = null, $attributes = array(), $empty = true, $valueType = "any")
     {
         parent::__construct($name, $type, $required, $multiple, $attributes, $parent);
 

@@ -1,7 +1,7 @@
 ToPX:
   required: true
   multiple: false
-  type: container
+  type: complex
   attributes:
     name:
       required:
@@ -12,47 +12,47 @@ ToPX:
     name:
       required:
       usermapped: false
-  childelements:
+  children:
     bestand:
       required: true
       multiple: false
-      type: container
-      childelements:
+      type: complex
+      children:
         identificatiekenmerk:
           required: true
           multiple: false
-          type: string
+          type: simple
           usermapped: false
         aggregatieniveau:
           required: true
           multiple: false
-          type: string
+          type: simple
           usermapped: true
           usermappedselectable: true
         naam:
           required: true
           multiple: true
-          type: string
+          type: simple
           usermapped: true
           usermappedselectable: true
         vorm:
           required: true
           multiple: true
-          type: container
+          type: complex
           usermappedselectable: true
-          childelements:
+          children:
             redactieGerne:
               required: true
               multiple: false
-              type: string
+              type: simple
               usermapped: true
             verschijningsvorm:
               required: false
               multiple: true
-              type: string
+              type: simple
               usermapped: true
             structure:
               required: false
               multiple: false
-              type: string
+              type: simple
               usermapped: true

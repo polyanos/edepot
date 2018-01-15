@@ -1,0 +1,10 @@
+#Non multiple elements and unbound multiple elements
+groupname:
+  mappingname: mappingvalue
+
+#bound multiple elements
+groupname:
+  - mappingname: mappingvalue
+    mappingname: mappingvalue
+  - mappingname: mappingvalue
+    mappingname: mappingvalue
