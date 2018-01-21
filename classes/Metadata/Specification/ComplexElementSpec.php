@@ -12,6 +12,7 @@ include_once "ElementSpec.php";
 class ComplexElementSpec extends ElementSpec
 {
     private $children;
+    private $fillableGroupName;
 
     /**
      * ComplexElementSpec constructor.
@@ -21,12 +22,21 @@ class ComplexElementSpec extends ElementSpec
      * @param bool $multiple
      * @param ElementSpec $parent
      * @param array $attributes
+     * @param string $fillableGroupName
      */
-    public function __construct($name, $type, $required = false, $multiple = false, $parent = null, $attributes = array())
+    public function __construct($name, $type, $required = false, $multiple = false, $parent = null, $attributes = array(), $fillableGroupName = null)
     {
         parent::__construct($name, $type, $required, $multiple, $attributes, $parent);
 
         $this->children = array();
+        if(is_string($fillableGroupName) && !empty($fillableGroupName)) {
+            $this->fillableGroupName = $fillableGroupName;
+        } else {
+            $this->fillableGroupName = null;
+            if(!is_null($fillableGroupName)) {
+                trigger_error('Invalid value passed for $fillableGroupName, value defaulted to null', E_WARNING);
+            }
+        }
     }
 
     /**
@@ -59,5 +69,13 @@ class ComplexElementSpec extends ElementSpec
         } else{
             return null;
         }
+    }
+
+    public function needsToBeFilled(){
+        return $this->fillableGroupName !== null;
+    }
+
+    public function getGroupName(){
+        return $this->fillableGroupName;
     }
 }

@@ -3,14 +3,8 @@ ToPX:
   multiple: false
   type: complex
   attributes:
-    name:
-      required:
-      usermapped: false
-    name:
-      required:
-      usermapped: false
-    name:
-      required:
+    attribute 1:
+      required: true
       usermapped: false
   children:
     bestand:
@@ -39,7 +33,7 @@ ToPX:
           required: true
           multiple: true
           type: complex
-          usermappedselectable: true
+          mappinggroup: true
           children:
             redactieGerne:
               required: true

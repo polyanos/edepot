@@ -1,0 +1,28 @@
+#If a attribute is optional [] denotes the default value. Optional elements can be absent if not needed.
+#Complex Elements (Elements that contain other elements)
+element_name:
+  type: complex                     #mandatory
+  required: true|false              #mandatory
+  multiple: true|[false]            #optional
+  mappinggroup: true|[false]        #optional
+  mappinggroupname: <name>          #optional, will default to the element name if absent
+  attributes:                       #optional, a element can have multiple attributes.
+    attribute_element
+  children:                         #optional, a complex element can have multiple simple and complex element children.
+    complex_element|simple_element
+
+#Simple Elements (Elements that only contain a value)
+element_name:
+  type: complex                     #mandatory
+  required: true|false              #mandatory
+  multiple: true|[false]            #optional
+  mappingname: <name>               #optional, will default to the element name if absent. In case of a duplicate element name in the same mappinggroup, this field will be mandatory.
+  usermapped: true|[false]          #optional, determines if the user can assign its own mapping to the element.
+  valuetype: <valuetype> ([any])    #optional, determines witch value type the element accepts (like a string for example), available value-types are the ones present in $registeredValues in SimpleElementSpec.php
+  attributes:                       #optional, a element can have multiple attributes.
+    attribute_element
+
+#Attribute Elements
+attribute_name:
+  required: true|false              #mandatory
+  usermapped: true|[false]          #optional, determines if the user can assign its own mapping to the attribute.

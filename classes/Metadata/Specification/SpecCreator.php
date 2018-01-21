@@ -39,7 +39,9 @@ class SpecCreator
                     $this->getManSpecValue($specData, "type"),
                     $this->getSpecValue($specData, "required", false),
                     $this->getSpecValue($specData, "multiple", false),
-                    $parent
+                    $parent,
+                    $this->getSpecValue($specData, "attributes", array()),
+                    $this->getSpecValue($specData, "groupName", null)
                 );
 
                 if(isset($specData["children"]) && is_array($specData["children"])){
@@ -87,6 +89,10 @@ class SpecCreator
         if($this->debug){
             echo "<pre>".$message."</pre>";
         }
+    }
+
+    private function checkDuplicateElementNames($spec, &$nameData, $currentGroup){
+
     }
 
     public function getSpecification(){

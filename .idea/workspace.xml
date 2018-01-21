@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b92b4e6a-93c7-4734-9a25-ac8b6b9fde02" name="Default" comment="" />
+    <list default="true" id="b92b4e6a-93c7-4734-9a25-ac8b6b9fde02" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/documentation/Xml_Mapping_Semantics.yaml" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Gregor.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Gregor.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/classes/Metadata/Specification/ComplexElementSpec.php" afterPath="$PROJECT_DIR$/classes/Metadata/Specification/ComplexElementSpec.php" />
+      <change beforePath="$PROJECT_DIR$/classes/Metadata/Specification/ElementSpec.php" afterPath="$PROJECT_DIR$/classes/Metadata/Specification/ElementSpec.php" />
+      <change beforePath="$PROJECT_DIR$/classes/Metadata/Specification/SpecCreator.php" afterPath="$PROJECT_DIR$/classes/Metadata/Specification/SpecCreator.php" />
+      <change beforePath="$PROJECT_DIR$/classes/Metadata/Specification/specfiles/ToPX_File_Spec.yaml" afterPath="$PROJECT_DIR$/classes/Metadata/Specification/specfiles/ToPX_File_Spec.yaml" />
+      <change beforePath="$PROJECT_DIR$/classes/metadata/xmlgenerator/xmlmapper/XmlMapper.php" afterPath="$PROJECT_DIR$/classes/metadata/xmlgenerator/xmlmapper/XmlMapper.php" />
+      <change beforePath="$PROJECT_DIR$/classes/metadata/xmlgenerator/xmlmapper/mapfiles/ToPX_File_Mapping.yaml" afterPath="" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,87 +21,110 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ComplexElementSpec.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/metadata/specification/ComplexElementSpec.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleXmlElement.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/metadata/xmlgenerator/xmltree/SimpleXmlElement.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XmlGenerator.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/metadata/xmlgenerator/xmltree/XmlGenerator.php">
+      <file leaf-file-name="XmlMapper.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/Metadata/xmlgenerator/xmlmapper/XmlMapper.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XmlMapper.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/classes/metadata/xmlgenerator/xmlmapper/XmlMapper.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+              <caret line="25" column="128" lean-forward="false" selection-start-line="25" selection-start-column="128" selection-end-line="25" selection-end-column="128" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ComplexXmlElement.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/metadata/xmlgenerator/xmltree/ComplexXmlElement.php">
+        <entry file="file://$PROJECT_DIR$/classes/Metadata/xmlgenerator/xmltree/ComplexXmlElement.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="14" column="61" lean-forward="false" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
+            <state relative-caret-position="-6">
+              <caret line="12" column="64" lean-forward="false" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XmlElement.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/metadata/xmlgenerator/xmltree/XmlElement.php">
+      <file leaf-file-name="XmlGenerator.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/Metadata/xmlgenerator/xmltree/XmlGenerator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-537">
-              <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+            <state relative-caret-position="323">
+              <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="SpecCreator.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/metadata/specification/SpecCreator.php">
+        <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/SpecCreator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1513">
-              <caret line="94" column="1" lean-forward="false" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
+            <state relative-caret-position="691">
+              <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="SpecTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/metadata/specification/SpecTest.php">
+        <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/SpecTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ElementSpec.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/ElementSpec.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="436">
+              <caret line="58" column="9" lean-forward="false" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Xml_Mapping_Semantics.yaml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/documentation/Xml_Mapping_Semantics.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToPX_File_Spec.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/specfiles/ToPX_File_Spec.yaml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="12" column="64" lean-forward="true" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
+              <caret line="7" column="23" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="7" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Xml_Spec_Semantics.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/documentation/Xml_Spec_Semantics.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="89" lean-forward="false" selection-start-line="7" selection-start-column="89" selection-end-line="7" selection-end-column="89" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleElementSpec.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/SimpleElementSpec.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -102,24 +135,43 @@
         <option value="$PROJECT_DIR$/classes/metadata/xmlgenerator/xmltree/ComplexXmlElement.php" />
         <option value="$PROJECT_DIR$/classes/metadata/xmlgenerator/xmltree/SimpleXmlElement.php" />
         <option value="$PROJECT_DIR$/classes/metadata/xmlgenerator/xmltree/XmlGenerator.php" />
+        <option value="$PROJECT_DIR$/classes/Metadata/xmlgenerator/xmlmapper/XmlMapper.php" />
+        <option value="$PROJECT_DIR$/classes/Metadata/Specification/ComplexElementSpec.php" />
+        <option value="$PROJECT_DIR$/classes/Metadata/Specification/ElementSpec.php" />
+        <option value="$PROJECT_DIR$/classes/Metadata/xmlgenerator/xmlmapper/mapfiles/ToPX_File_Mapping.yaml" />
+        <option value="$PROJECT_DIR$/classes/Metadata/Specification/SpecCreator.php" />
+        <option value="$PROJECT_DIR$/classes/Metadata/Specification/specfiles/ToPX_File_Spec.yaml" />
+        <option value="$PROJECT_DIR$/classes/Metadata/Specification/specfiles/File_Spec_Semantics" />
+        <option value="$PROJECT_DIR$/documentation/Xml_Spec_Semantics.yaml" />
+        <option value="$PROJECT_DIR$/documentation/Xml_Mapping_Semantics.yaml" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP_v5" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="516" />
-    <option name="y" value="44" />
+    <option name="x" value="1134" />
+    <option name="y" value="117" />
     <option name="width" value="683" />
     <option name="height" value="728" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -136,6 +188,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -152,52 +205,43 @@
               <item name="sipcreator" type="b2602c69:ProjectViewProjectNode" />
               <item name="edepot" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="classes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="metadata" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Metadata" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="sipcreator" type="b2602c69:ProjectViewProjectNode" />
               <item name="edepot" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="classes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="metadata" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="specification" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Metadata" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Specification" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="sipcreator" type="b2602c69:ProjectViewProjectNode" />
               <item name="edepot" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="classes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="metadata" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="specification" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Metadata" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Specification" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="specfiles" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="sipcreator" type="b2602c69:ProjectViewProjectNode" />
               <item name="edepot" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="classes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="metadata" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Metadata" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="xmlgenerator" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="sipcreator" type="b2602c69:ProjectViewProjectNode" />
               <item name="edepot" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="classes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="metadata" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="xmlgenerator" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="xmlmapper" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="sipcreator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="edepot" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="classes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="metadata" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Metadata" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="xmlgenerator" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="xmlmapper" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mapfiles" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="sipcreator" type="b2602c69:ProjectViewProjectNode" />
               <item name="edepot" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="classes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="metadata" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Metadata" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="xmlgenerator" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="xmltree" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
@@ -210,23 +254,24 @@
             <path>
               <item name="sipcreator" type="b2602c69:ProjectViewProjectNode" />
               <item name="edepot" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="gui" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="documentation" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gregor\PhpstormProjects\edepot\documentation" />
       <recent name="C:\Users\Gregor\PhpstormProjects\edepot\classes\metadata\xmlgenerator\xmlmapper\mapfiles" />
     </key>
   </component>
@@ -241,6 +286,20 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="PHP Script.SpecCreator.php">
+    <configuration name="SpecCreator.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sipcreator/classes/Metadata/Specification/SpecCreator.php" />
+    <configuration name="SpecCreator.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/classes/Metadata/Specification/SpecCreator.php" />
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.SpecCreator.php" />
+      <item index="1" class="java.lang.String" itemvalue="PHP Script.SpecCreator.php" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.SpecCreator.php" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.SpecCreator.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -257,19 +316,21 @@
       <updated>1516030983325</updated>
       <workItem from="1516030984562" duration="742000" />
       <workItem from="1516031802025" duration="2283000" />
+      <workItem from="1516043127107" duration="3059000" />
+      <workItem from="1516470982971" duration="8948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3025000" />
+    <option name="totallyTimeSpent" value="15032000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24895833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -277,7 +338,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997879" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -294,11 +355,20 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/classes/Metadata/Specification/SpecCreator.php</url>
+          <line>98</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/classes/metadata/specification/ComplexElementSpec.php">
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/ComplexElementSpec.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -306,23 +376,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/metadata/xmlgenerator/xmltree/SimpleXmlElement.php">
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/xmlgenerator/xmlmapper/XmlMapper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="323">
+          <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/metadata/xmlgenerator/xmltree/ComplexXmlElement.php">
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/xmlgenerator/xmltree/ComplexXmlElement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="12" column="64" lean-forward="false" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/metadata/specification/SpecCreator.php">
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/xmlgenerator/xmltree/XmlGenerator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="54" lean-forward="true" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/SpecCreator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1513">
           <caret line="94" column="1" lean-forward="false" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
@@ -330,15 +408,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/metadata/specification/SpecTest.php">
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/SpecTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="64" lean-forward="true" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
+        <state relative-caret-position="51">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/metadata/specification/ComplexElementSpec.php">
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/ComplexElementSpec.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -346,50 +424,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/metadata/ToPXMetadataCreator.php">
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/SpecCreator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="94" column="1" lean-forward="false" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/SpecTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/ComplexElementSpec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/xmlgenerator/xmltree/SimpleXmlElement.php" />
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/xmlgenerator/xmltree/ComplexXmlElement.php" />
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/ToPXMetadataCreator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="426" column="34" lean-forward="false" selection-start-line="426" selection-start-column="34" selection-end-line="426" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/metadata/xmlgenerator/xmltree/ComplexXmlElement.php">
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/xmlgenerator/xmltree/XmlElement.php" />
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/xmlgenerator/xmltree/SimpleXmlElement.php" />
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/ComplexElementSpec.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="61" lean-forward="false" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
+        <state relative-caret-position="663">
+          <caret line="44" column="49" lean-forward="false" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/metadata/xmlgenerator/xmltree/XmlElement.php">
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/SpecTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-537">
-          <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        <state relative-caret-position="85">
+          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/metadata/xmlgenerator/xmltree/SimpleXmlElement.php">
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/xmlgenerator/xmltree/ComplexXmlElement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="-6">
+          <caret line="12" column="64" lean-forward="false" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/metadata/xmlgenerator/xmltree/XmlGenerator.php">
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/xmlgenerator/xmltree/XmlGenerator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/xmlgenerator/xmlmapper/XmlMapper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <caret line="25" column="128" lean-forward="false" selection-start-line="25" selection-start-column="128" selection-end-line="25" selection-end-column="128" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/metadata/xmlgenerator/xmlmapper/XmlMapper.php">
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/SpecCreator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="691">
+          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/specfiles/ToPX_File_Spec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/ElementSpec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="58" column="9" lean-forward="false" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Metadata/Specification/SimpleElementSpec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/documentation/Xml_Spec_Semantics.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="89" lean-forward="false" selection-start-line="7" selection-start-column="89" selection-end-line="7" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/documentation/Xml_Mapping_Semantics.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>

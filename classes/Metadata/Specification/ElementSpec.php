@@ -27,10 +27,10 @@ class ElementSpec implements iElementSpec
      * @param string $type
      * @param bool $required
      * @param bool $multiple
-     * @param null $attributes
+     * @param array $attributes
      * @param ElementSpec|null $parent
      */
-    public function __construct($name, $type, $required = false, $multiple = false, $attributes = null, ElementSpec $parent = null)
+    public function __construct($name, $type, $required = false, $multiple = false, $attributes = array(), ElementSpec $parent = null)
     {
         //Mandatory arguments
         if(is_string($name) && !empty($name)){
@@ -43,6 +43,10 @@ class ElementSpec implements iElementSpec
         } else{
             throw new InvalidArgumentException("Type needs to be either 'simple' or 'complex'");
         }
+        if(!is_array($attributes)){
+            $this->attributes = array();
+            trigger_error("Invalid value type given for \$attributes expected an array, defaulting to an empty array.", E_WARNING);
+        }
 
         //Optional arguments
         $this->required = is_bool($required) ? $required : false;
@@ -50,10 +54,8 @@ class ElementSpec implements iElementSpec
         $this->parent = $parent;
 
         $this->attributes = array();
-        if(isset($attributes)) {
-            foreach ($attributes as $attribute) {
-                $this->attributes[] = new AttributeSpec($attribute["name"], $attribute["required"]);
-            }
+        foreach ($attributes as $name => $data) {
+            $this->attributes[] = new AttributeSpec($name, $data["required"]);
         }
     }
 
