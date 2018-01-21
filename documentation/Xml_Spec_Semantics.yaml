@@ -5,7 +5,7 @@ element_name:
   required: true|false              #mandatory
   multiple: true|[false]            #optional
   mappinggroup: true|[false]        #optional
-  mappinggroupname: <name>          #optional, will default to the element name if absent
+  mappingname: <name>               #In case of a duplicate element name in the same mappinggroup, this field will be mandatory. If mappinggroup is true this will also be the group name.
   attributes:                       #optional, a element can have multiple attributes.
     attribute_element
   children:                         #optional, a complex element can have multiple simple and complex element children.

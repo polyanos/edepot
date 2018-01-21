@@ -1,0 +1,68 @@
+ToPX:
+  required: true
+  multiple: false
+  type: complex
+  attributes:
+    attribute 1:
+      required: true
+      usermapped: false
+  children:
+    bestand:
+      required: true
+      multiple: false
+      type: complex
+      children:
+        identificatiekenmerk:
+          required: true
+          multiple: false
+          type: simple
+          usermapped: false
+        aggregatieniveau:
+          required: true
+          multiple: false
+          type: simple
+          usermapped: true
+          usermappedselectable: true
+        naam:
+          required: true
+          multiple: true
+          type: simple
+          usermapped: true
+          usermappedselectable: true
+        vorm:
+          required: true
+          multiple: true
+          type: complex
+          mappinggroup: true
+          children:
+            redactieGerne:
+              required: true
+              multiple: false
+              type: simple
+              usermapped: true
+            verschijningsvorm:
+              required: false
+              multiple: true
+              type: simple
+              usermapped: true
+            structure:
+              required: false
+              multiple: false
+              type: simple
+              usermapped: true
+        bestand:
+          required: true
+          multiple: false
+          type: complex
+          children:
+            identificatiekenmerk:
+              required: true
+              multiple: false
+              type: simple
+              usermapped: false
+            aggregatieniveau:
+              required: true
+              multiple: false
+              type: simple
+              usermapped: true
+              usermappedselectable: true
