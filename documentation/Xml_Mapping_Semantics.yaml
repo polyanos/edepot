@@ -1,0 +1,15 @@
+#Non multiple elements and unbound multiple elements (this file should be automatically generated)
+groupname:                      #Refers to a groupname bound to a complex element in a Xml Spec document.
+  element1: mappingvalue        #Refers to a element name or a mapping name of a simple element in a Xml Spec document.
+
+#bound multiple elements
+groupname:
+  - element1_1: elementValue_1
+    element2_1: elementValue_1
+  - element1_2: elementValue_2
+    element2_2: elementValue_2
+
+#Dynamic multiple elements (this will looks for all instances of the specified mapping name which need to named like name_<number>)
+groupname:
+  element1_*: elementValue
+  element2_*: elementValue

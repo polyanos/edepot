@@ -11,70 +11,71 @@ include_once "ElementSpec.php";
 
 class ComplexElementSpec extends ElementSpec
 {
-    private $multiple;
-    private $childSpec;
+    private $children;
+    private $fillableGroupName;
 
-    public function __construct($specification, $fullSpec)
+    /**
+     * ComplexElementSpec constructor.
+     * @param string $name
+     * @param string $type
+     * @param bool $required
+     * @param bool $multiple
+     * @param ElementSpec $parent
+     * @param array $attributes
+     * @param string $fillableGroupName
+     */
+    public function __construct($name, $type, $required = false, $multiple = false, $parent = null, $attributes = array(), $fillableGroupName = null)
     {
-        parent::__construct($specification);
+        parent::__construct($name, $type, $required, $multiple, $attributes, $parent);
 
-        $this->multiple = $specification["multiple"];
-        $this->childSpec = createChildSpec();
-    }
-
-    private function createChildrenSpec($jsonSpec, $fullJsonSpec){
-        $children = [];
-
-        foreach($jsonSpec["children"] as $childJsonSpec){
-            if($this->isShortcut($childJsonSpec)){
-                $childJsonSpec = $fullJsonSpec[$childJsonSpec];
-            }
-            if(is_array($childJsonSpec)){
-                if(isset($childJsonSpec[0])){
-                    $children[] = $this->createChoiceSpec($childJsonSpec, $fullJsonSpec);
-                } else {
-                    $children[] = $this->createChildSpec($childJsonSpec, $fullJsonSpec);
-                }
-            } else {
-                trigger_error("");
-            }
-        }
-    }
-
-    private function isShortcut($val){
-        $regEx = "/^\:\:[\w]{4,}$/";
-        if(is_string($val) && preg_match($regEx, $val)){
-            return true;
+        $this->children = array();
+        if(is_string($fillableGroupName) && !empty($fillableGroupName)) {
+            $this->fillableGroupName = $fillableGroupName;
         } else {
-            return false;
-        }
-    }
-
-    private function createChoiceSpec($childJsonChoiceSpec, $fullJsonSpec){
-        $childChoice = [];
-        foreach($childJsonChoiceSpec as $childJsonSpec){
-            if($this->isShortcut($childJsonSpec)){
-                $childChoice[] = $this->createChildSpec($fullJsonSpec["$childJsonSpec"], $fullJsonSpec);
-            }else {
-                $childChoice[] = $this->createChildSpec($childJsonSpec, $fullJsonSpec);
+            $this->fillableGroupName = null;
+            if(!is_null($fillableGroupName)) {
+                trigger_error('Invalid value passed for $fillableGroupName, value defaulted to null', E_WARNING);
             }
         }
-
-        return $childChoice;
     }
 
-    private function createChildSpec($childJsonSpec, $fullJsonSpec){
-        switch($childJsonSpec["type"]){
-            case iElementSpec::simple:
-                $child = new SimpleElementSpec($childJsonSpec);
-                break;
-            case iElementSpec::complex:
-                $child = new ComplexElementSpec($childJsonSpec, $fullJsonSpec);
-                break;
-            default:
-                $child = null;
+    /**
+     * @param ElementSpec $child
+     */
+    public function addChild(ElementSpec $child){
+        if(isset($this->children[$child->getName()])){
+            throw new InvalidArgumentException("This element already has a child named ".$child->getName()." and cannot have multiple children of this element");
+        } else{
+            $this->children[$child->getName()] = $child;
+        }
+    }
+
+    /**
+     * @param ElementSpec[] $children
+     */
+    public function addChildren($children){
+        if(!is_array($children)){
+            throw new InvalidArgumentException("Children needs to be an array");
         }
 
-        return $child;
+        foreach($children as $child){
+            $this->addChild($child);
+        }
+    }
+
+    public function getChild($name){
+        if(isset($this->children[$name])){
+            return $this->children[$name];
+        } else{
+            return null;
+        }
+    }
+
+    public function needsToBeFilled(){
+        return $this->fillableGroupName !== null;
+    }
+
+    public function getGroupName(){
+        return $this->fillableGroupName;
     }
 }

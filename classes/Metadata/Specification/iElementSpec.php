@@ -13,6 +13,7 @@ interface iElementSpec
 
     public function getName();
     public function getType();
-    public function getMandatory();
+    public function getRequired();
+    public function getMultiple();
     public function getAttributes();
 }

@@ -9,13 +9,11 @@
 class AttributeSpec
 {
     private $name;
-    private $value;
     private $mandatory;
 
     /**
      * AttributeSpec constructor.
      * @param $name
-     * @param $value
      * @param $mandatory
      */
     public function __construct($name, $mandatory)

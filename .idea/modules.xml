@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../sipcreator/.idea/sipcreator.iml" filepath="$PROJECT_DIR$/../sipcreator/.idea/sipcreator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/edepot.iml" filepath="$PROJECT_DIR$/.idea/edepot.iml" />
     </modules>
   </component>
 </project>
