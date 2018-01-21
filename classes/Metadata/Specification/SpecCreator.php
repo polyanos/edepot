@@ -27,16 +27,14 @@ class SpecCreator
             throw new InvalidArgumentException("The root level of the array cannot contain more than 1 element.");
         }
 
-        $rootName = array_keys($parsedSpec)[0];
-
         $nameData = array();
-        $this->checkDuplicateElementNames($rootName, $parsedSpec[$rootName], $nameData, "root");
+        $this->checkDuplicateElementNames($parsedSpec[0], $nameData, "root");
 
         $this->debugMessage(print_r($nameData, true));
         if(isset($nameData["duplicates"])){
             $this->debugMessage("There are naming conflicts in the spec file, these need to be resolved before parsing can continue. Check the spec file and resolve the following conflicts:");
             foreach($nameData["duplicates"] as $duplicate){
-                if($duplicate["type"] = "mapping") {
+                if($duplicate["type"] === "mapping") {
                     $this->debugMessage("Duplicate name detected in mappinggroup {$duplicate["group"]}, the mapping name {$duplicate["name"]} already exists as a element or mapping name");
                 } else{
                     $this->debugMessage("Duplicate name detected in mappinggroup {$duplicate["group"]}, the element name {$duplicate["name"]} already exists as a element or mapping name");
@@ -45,15 +43,15 @@ class SpecCreator
             throw new LogicException("Duplicate names detected in spec file, see previous messages.");
         }
 
-        $root = $this->constructElement(null, $rootName, $parsedSpec[$rootName]);
+        $root = $this->constructElement(null, $parsedSpec[0]);
         return $root;
     }
 
-    private function constructElement($parent, $name, $specData){
+    private function constructElement($parent, $specData){
         switch($specData["type"]){
             case iElementSpec::complex:
                 $element = new ComplexElementSpec(
-                    $name,
+                    $this->getManSpecValue($specData, "name"),
                     $this->getManSpecValue($specData, "type"),
                     $this->getSpecValue($specData, "required", false),
                     $this->getSpecValue($specData, "multiple", false),
@@ -63,15 +61,15 @@ class SpecCreator
                 );
 
                 if(isset($specData["children"]) && is_array($specData["children"])){
-                    foreach($specData["children"] as $childName => $childData){
-                        $child = $this->constructElement($element, $childName, $childData);
+                    foreach($specData["children"] as $childData){
+                        $child = $this->constructElement($element, $childData);
                         $element->addChild($child);
                     }
                 }
                 break;
             case iElementSpec::simple:
                 $element = new SimpleElementSpec(
-                    $name,
+                    $this->getManSpecValue($specData, "name"),
                     $this->getManSpecValue($specData, "type"),
                     $this->getSpecValue($specData, "required", false),
                     $this->getSpecValue($specData, "multiple", false),
@@ -109,13 +107,13 @@ class SpecCreator
         }
     }
 
-    private function checkDuplicateElementNames($elementName, $elementData, &$nameData, $currentGroup){
-        $this->debugMessage("Checking element '$elementName' in group '$currentGroup'");
+    private function checkDuplicateElementNames($elementData, &$nameData, $currentGroup){
+        $this->debugMessage("Checking element '{$elementData["name"]}' in group '$currentGroup'");
         if(!isset($nameData[$currentGroup])){
             $nameData[$currentGroup] = array();
         }
 
-        $mappingName = isset($elementData["mappingname"]) ? [$elementData["mappingname"], "mapping"] : [$elementName, "name"];
+        $mappingName = isset($elementData["mappingname"]) ? [$elementData["mappingname"], "mapping"] : [$elementData["name"], "name"];
         if(isset($nameData[$currentGroup][$mappingName[0]])){
             $nameData["duplicates"][] = ["group" => $currentGroup, "name" => $mappingName[0], "type" => $mappingName[1]];
         } else{
@@ -124,11 +122,11 @@ class SpecCreator
 
         if($elementData["type"] === iElementSpec::complex){
             if(isset($elementData["mappinggroup"])){
-                $currentGroup = isset($elementData["mappinggroupname"]) ? $elementData["mappinggroupname"] : $elementName;
+                $currentGroup = isset($elementData["mappinggroupname"]) ? $elementData["mappinggroupname"] : $elementData["name"];
             }
             if(isset($elementData["children"])){
                 foreach($elementData["children"] as $elementName => $elementData){
-                    $this->checkDuplicateElementNames($elementName, $elementData, $nameData, $currentGroup);
+                    $this->checkDuplicateElementNames($elementData, $nameData, $currentGroup);
                 }
             }
         }

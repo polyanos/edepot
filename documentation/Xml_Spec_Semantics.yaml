@@ -1,18 +1,19 @@
 #If a attribute is optional [] denotes the default value. Optional elements can be absent if not needed.
 #Complex Elements (Elements that contain other elements)
 element_name:
+- name: <name>                      #mandatory
   type: complex                     #mandatory
   required: true|false              #mandatory
   multiple: true|[false]            #optional
   mappinggroup: true|[false]        #optional
   mappingname: <name>               #In case of a duplicate element name in the same mappinggroup, this field will be mandatory. If mappinggroup is true this will also be the group name.
   attributes:                       #optional, a element can have multiple attributes.
-    attribute_element
+    - attribute_element
   children:                         #optional, a complex element can have multiple simple and complex element children.
-    complex_element|simple_element
+    - complex_element|simple_element
 
 #Simple Elements (Elements that only contain a value)
-element_name:
+- name: <name>                      #mandatory
   type: complex                     #mandatory
   required: true|false              #mandatory
   multiple: true|[false]            #optional
@@ -23,6 +24,6 @@ element_name:
     attribute_element
 
 #Attribute Elements
-attribute_name:
+- name: <name>                      #mandatory
   required: true|false              #mandatory
   usermapped: true|[false]          #optional, determines if the user can assign its own mapping to the attribute.

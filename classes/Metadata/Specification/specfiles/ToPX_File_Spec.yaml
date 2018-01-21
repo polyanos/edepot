@@ -1,51 +1,51 @@
-ToPX:
+- name: ToPX
   required: true
   multiple: false
   type: complex
   attributes:
-    attribute 1:
+    - name: atribute 1
       required: true
       usermapped: false
   children:
-    bestand:
+    - name: bestand
       required: true
       multiple: false
       type: complex
       children:
-        identificatiekenmerk:
+        - name: identificatiekenmerk
           required: true
           multiple: false
           type: simple
           usermapped: false
-        aggregatieniveau:
+        - name: aggregatieniveau
           required: true
           multiple: false
           type: simple
           usermapped: true
           usermappedselectable: true
-        naam:
+        - name: naam
           required: true
           multiple: true
           type: simple
           usermapped: true
           usermappedselectable: true
-        vorm:
+        - name: vorm
           required: true
           multiple: true
           type: complex
           mappinggroup: true
           children:
-            redactieGerne:
+            - name: redactieGerne
               required: true
               multiple: false
               type: simple
               usermapped: true
-            verschijningsvorm:
+            - name: verschijningsvorm
               required: false
               multiple: true
               type: simple
               usermapped: true
-            structure:
+            - name: structure
               required: false
               multiple: false
               type: simple
